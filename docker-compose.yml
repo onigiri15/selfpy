@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  selfpy:
+    image: selfpy
+    build:
+      context: .
+      dockerfile: ./Dockerfile
