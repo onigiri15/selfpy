@@ -1,10 +1,10 @@
 maxhp=360
-maxmp=780
-novamp=79
+maxmp=1180
+novamp=400
 recoverlyline1=100
 recoverlyamout=100
-novadamege=98
-recoverlymp=200
+novadamege=600
+recoverlymp=500
 tarn=1
 #変数の定義
 n1hp =maxhp
@@ -39,13 +39,15 @@ while n1hp > 0 or n2hp > 0:
     print(n1skill)
     print('が発動')
     if n1skill == 'スーパーノヴァ':
-        n2hp =-novadamege
+        n2hp =- novadamege
+        n1mp =- novamp
         print('n2に')
         print(novadamege)
         print('のダメージ')
     #スーパーノヴァ
     elif n1skill == 'リカバリーショット':
         n1hp += recoverlyamout
+        n1mp =- recoverlymp
         print('n1は')
         print(recoverlyamout)
         print('回復')
@@ -79,12 +81,14 @@ while n1hp > 0 or n2hp > 0:
     print('が発動')
     if n2skill == 'スーパーノヴァ':
         n1hp =-novadamege
+        n2mp =- novamp
         print('n1に')
         print(novadamege)
         print('のダメージ')
     #スーパーノヴァ
     elif n2skill == 'リカバリーショット':
         n2hp += recoverlyamout
+        n2mp += recoverlymp
         print('n2は')
         print(recoverlyamout)
         print('回復')
@@ -98,5 +102,9 @@ while n1hp > 0 or n2hp > 0:
         break
 if n2hp <=0:
     print('n1の勝利')
-else:
+elif n1hp<=0:
     print('n2の勝利')
+elif tarn == 10000:
+    print('規定ターンに達しました。')
+else:
+    print('エラー')
