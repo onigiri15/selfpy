@@ -39,15 +39,15 @@ while n1hp > 0 and n2hp > 0:
     print(n1skill)
     print('が発動')
     if n1skill == 'スーパーノヴァ':
-        n2hp =- novadamege
-        n1mp =- novamp
+        n2hp -= novadamege
+        n1mp -= novamp
         print('n2に')
         print(novadamege)
         print('のダメージ')
     #スーパーノヴァ
     elif n1skill == 'リカバリーショット':
         n1hp += recoverlyamout
-        n1mp =- recoverlymp
+        n1mp -= recoverlymp
         print('n1は')
         print(recoverlyamout)
         print('回復')
@@ -80,8 +80,8 @@ while n1hp > 0 and n2hp > 0:
     print(n2skill)
     print('が発動')
     if n2skill == 'スーパーノヴァ':
-        n1hp =-novadamege
-        n2mp =- novamp
+        n1hp -=novadamege
+        n2mp -= novamp
         print('n1に')
         print(novadamege)
         print('のダメージ')
