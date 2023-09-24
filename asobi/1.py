@@ -100,8 +100,11 @@ while n1hp > 0 or n2hp > 0:
     print('n1のHP')
     print(n1hp)
     print('n1のMP')
+    print(n1mp)
     print('n2のHP')
+    print(n2hp)
     print('n2のMP')
+    print(n2mp)
     tarn += 1
     if tarn == 10000:
         break
