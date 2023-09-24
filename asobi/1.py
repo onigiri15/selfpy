@@ -88,7 +88,7 @@ while n1hp > 0 or n2hp > 0:
     #スーパーノヴァ
     elif n2skill == 'リカバリーショット':
         n2hp += recoverlyamout
-        n2mp += recoverlymp
+        n2mp -= recoverlymp
         print('n2は')
         print(recoverlyamout)
         print('回復')
@@ -97,6 +97,11 @@ while n1hp > 0 or n2hp > 0:
         n2mp = maxmp
         print('n2のMPが最大まで回復した')
 #n2のターン終わり
+    print('n1のHP')
+    print(n1hp)
+    print('n1のMP')
+    print('n2のHP')
+    print('n2のMP')
     tarn += 1
     if tarn == 10000:
         break
