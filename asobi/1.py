@@ -106,6 +106,10 @@ while n1hp > 0 or n2hp > 0:
     print('n2のMP')
     print(n2mp)
     tarn += 1
+    if n1hp <= 0:
+        break
+    if n2hp <= 0:
+        break
     if tarn == 10000:
         break
 if n2hp <=0:
