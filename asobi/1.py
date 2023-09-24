@@ -1,4 +1,4 @@
-maxhp=360
+maxhp=3600
 maxmp=1180
 novamp=400
 recoverlyline1=100
@@ -15,7 +15,7 @@ recoverlyline2=novadamege
 #数値設定
 print('バトル開始')
 #スーパーノヴァ、リカバリーショット、リセット
-while n1hp > 0 or n2hp > 0:
+while n1hp > 0 and n2hp > 0:
     print(tarn)
     print('n1のターン')
     if n1hp >= recoverlyline1:
@@ -106,10 +106,7 @@ while n1hp > 0 or n2hp > 0:
     print('n2のMP')
     print(n2mp)
     tarn += 1
-    if n1hp <= 0:
-        break
-    if n2hp <= 0:
-        break
+    
     if tarn == 10000:
         break
 if n2hp <=0:
