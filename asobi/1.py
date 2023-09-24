@@ -109,6 +109,9 @@ while n1hp > 0 and n2hp > 0:
     
     if tarn == 10000:
         break
+print(tarn)
+print()
+print()
 if n2hp <=0:
     print('n1の勝利')
 elif n1hp<=0:
